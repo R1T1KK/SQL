@@ -38,4 +38,72 @@ SELECT USER_ID  FROM expense
 
 SELECT USER_ID  FROM income
 UNION ALL
-SELECT uSER_ID  FROM expense
+SELECT uSER_ID  FROM expense;
+
+SELECT AMOUNT  FROM income
+INTERSECT 
+SELECT AMOUNT  FROM expense;
+
+SELECT AMOUNT  FROM income
+EXCEPT
+SELECT AMOUNT  FROM expense;
+
+SELECT amount,user_id
+FROM expense
+UNION
+SELECT amount,user_id
+FROM income;
+
+SELECT amount,user_id
+FROM expense
+INTERSECT
+SELECT amount,user_id
+FROM income;
+
+SELECT e.user_id, e.amount
+FROM expense e
+INNER JOIN income i
+ON e.user_id = i.user_id;
+
+SELECT e.user_id, e.amount
+FROM expense e
+LEFT JOIN income i
+ON e.user_id = i.user_id;
+
+SELECT e.user_id, e.amount
+FROM expense e
+Right JOIN income i
+ON e.user_id = i.user_id;
+
+
+SELECT e.user_id, e.amount
+FROM expense e
+LEFT JOIN income i
+ON e.user_id = i.user_id
+UNION
+SELECT e.user_id, e.amount
+FROM expense e
+RIGHT JOIN income i
+ON e.user_id = i.user_id;
+
+
+CREATE VIEW user_expense_view AS
+SELECT user_id, amount, category, expense_date
+FROM expense;
+SELECT * FROM user_expense_view;
+
+CREATE VIEW user_fi_view AS
+SELECT 
+    e.user_id,
+    e.amount AS expense_amount,
+    e.category AS expense_category,
+    e.expense_date,
+    i.amount AS income_amount,
+    i.source AS income_source,
+    i.income_date
+FROM expense e
+JOIN income i
+ON e.user_id = i.user_id;
+
+select * from user_fi_view ;
+
