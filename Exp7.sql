@@ -48,8 +48,8 @@ CREATE TABLE Income1 (
 
 INSERT INTO Income1 (income_id, salary, username) VALUES
 (1, 50000, 'Hadeen'),
-(2, 30000, 'Ali'),
-(3, 45000, 'Sara');
+(2, 30000, 'Ritik'),
+(3, 45000, 'Atharva');
 
 select * from budget1;
 select * from user
