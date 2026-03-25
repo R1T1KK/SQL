@@ -77,3 +77,17 @@ SELECT
     i.income_date
 FROM user5 u
 NATURAL JOIN income3 i;
+
+
+SELECT 
+    u.user_id,
+    u.name,
+    u.email,
+    i.income_id,
+    i.amount,
+    i.source,
+    i.income_date
+FROM user5 u
+LEFT OUTER JOIN income3 i
+ON u.user_id = i.user_id;
+    
