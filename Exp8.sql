@@ -11,7 +11,9 @@ INSERT INTO Budget1 (budget_id,user_id, category_id, monthly_limit) VALUES
 (222,1, 102, 3000),
 (333,2, 101, 7000),
 (444,2, 103, 4000),
-(555,3, 104, 6000);
+(555,3, 104, 6000),
+(666,4 ,105, 8000)    
+    ;
 
 SELECT * FROM Budget1;
 
@@ -27,7 +29,8 @@ CREATE TABLE User (
 INSERT INTO User (user_id, name, email, password, created_at) VALUES
 (1, 'Hadeen', 'hadeen@gmail.com', 'pass1234', '2026-02-25'),
 (2, 'Ali', 'ali@gmail.com', 'ali@2026', '2026-02-24'),
-(3, 'Sara', 'sara@gmail.com', 'sara', '2026-02-23');
+(3, 'Sara', 'sara@gmail.com', 'sara', '2026-02-23'),
+(4, 'vro', 'vro@gmail.com', 'vro123', '2026-05-23');
 
 CREATE TABLE Income (
     income_id INT PRIMARY KEY,
