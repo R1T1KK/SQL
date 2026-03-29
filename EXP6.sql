@@ -3,7 +3,7 @@
 USE personal_expence;
 
 -- Step 1: Create expense_1 table to store expenses of users
-CREATE TABLE expense_1 (
+CREATE TABLE expense1 (
     expense_id INT,            -- Unique ID for each expense
     user_id INT,               -- ID of the user who made the expense
     category VARCHAR(100),     -- Expense category (Food, Travel, etc.)
